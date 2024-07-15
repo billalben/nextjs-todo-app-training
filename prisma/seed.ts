@@ -18,7 +18,6 @@ async function main() {
   //   data: Array.from({ length: 5 }).map(() => ({
   //     title: faker.lorem.words(2),
   //     body: faker.lorem.sentence(10),
-  //     userId: "6694fbe2fee7292a537b6450",
   //   })),
   // });
 
