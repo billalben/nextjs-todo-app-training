@@ -11,7 +11,7 @@ import {
 import { ITodo } from "@/interfaces";
 import TodosTableActions from "./TodosTableActions";
 import { Badge } from "./ui/badge";
-import moment from "moment";
+import dayjs from "dayjs";
 
 interface IProps {
   todos: ITodo[];
@@ -45,8 +45,8 @@ export default function TodosTable({ todos }: IProps) {
                 <Badge variant="secondary">Uncompleted</Badge>
               )}
             </TableCell>
-            <TableCell>{moment(todo.createdAt).format("MMMM Do YYYY, h:mm:ss a")}</TableCell>
-            <TableCell>{moment(todo.updatedAt).format("MMMM Do YYYY, h:mm:ss a")}</TableCell>
+            <TableCell>{dayjs(todo.createdAt).format("MMMM D YYYY")}</TableCell>
+            <TableCell>{dayjs(todo.updatedAt).format("MMMM D YYYY, H:MM A")}</TableCell>
             <TableCell className="flex items-center justify-end space-x-2">
               <TodosTableActions todo={todo} />
             </TableCell>
